@@ -1,0 +1,361 @@
+html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Heavenly Jumpstyle</title>
+
+    <link rel="icon" href="./blackhole.jpg" type="image/jpeg">
+
+    <style>
+
+        /* ===== MAIN PAGE ===== */
+
+        body {
+            margin: 0;
+            background: #03000a;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+
+        /* ===== ANIMATED STARS ===== */
+
+        .stars,
+        .stars2,
+        .stars3 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .stars {
+            background-image:
+                radial-gradient(2px 2px at 20px 30px, white, transparent),
+                radial-gradient(1px 1px at 100px 150px, white, transparent),
+                radial-gradient(2px 2px at 200px 80px, white, transparent),
+                radial-gradient(1px 1px at 300px 200px, white, transparent),
+                radial-gradient(2px 2px at 400px 100px, white, transparent),
+                radial-gradient(1px 1px at 500px 250px, white, transparent),
+                radial-gradient(2px 2px at 600px 50px, white, transparent),
+                radial-gradient(1px 1px at 700px 180px, white, transparent),
+                radial-gradient(2px 2px at 800px 120px, white, transparent);
+
+            background-size: 900px 300px;
+
+            animation: moveStars 20s linear infinite;
+            opacity: 0.8;
+        }
+
+        .stars2 {
+            background-image:
+                radial-gradient(1px 1px at 50px 100px, white, transparent),
+                radial-gradient(2px 2px at 180px 220px, white, transparent),
+                radial-gradient(1px 1px at 350px 50px, white, transparent),
+                radial-gradient(2px 2px at 550px 170px, white, transparent),
+                radial-gradient(1px 1px at 750px 90px, white, transparent);
+
+            background-size: 900px 300px;
+
+            animation: moveStars 35s linear infinite;
+            opacity: 0.5;
+        }
+
+        .stars3 {
+            background-image:
+                radial-gradient(2px 2px at 120px 60px, white, transparent),
+                radial-gradient(1px 1px at 270px 180px, white, transparent),
+                radial-gradient(2px 2px at 480px 120px, white, transparent),
+                radial-gradient(1px 1px at 680px 240px, white, transparent);
+
+            background-size: 900px 300px;
+
+            animation: moveStars 50s linear infinite;
+            opacity: 0.3;
+        }
+
+
+        @keyframes moveStars {
+
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(300px);
+            }
+
+        }
+
+
+        /* ===== CONTENT ===== */
+
+        .content {
+            position: relative;
+            z-index: 2;
+        }
+
+
+        /* ===== HEADER ===== */
+
+        .header {
+            padding: 70px 20px 40px;
+        }
+
+        .header h1 {
+            font-size: 55px;
+            letter-spacing: 5px;
+
+            text-shadow:
+                0 0 5px white,
+                0 0 15px #8c5cff,
+                0 0 30px #6a35ff,
+                0 0 60px #6a35ff;
+
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        .header p {
+            color: #c9baff;
+            font-size: 19px;
+
+            text-shadow:
+                0 0 10px #8c5cff;
+        }
+
+
+        /* ===== TITLE GLOW ===== */
+
+        @keyframes glow {
+
+            from {
+                text-shadow:
+                    0 0 5px white,
+                    0 0 15px #8c5cff,
+                    0 0 30px #6a35ff;
+            }
+
+            to {
+                text-shadow:
+                    0 0 10px white,
+                    0 0 25px #b38cff,
+                    0 0 50px #7c4dff,
+                    0 0 80px #6a35ff;
+            }
+
+        }
+
+
+        /* ===== CARDS ===== */
+
+        .card {
+            width: 70%;
+            max-width: 800px;
+
+            margin: 40px auto;
+            padding: 35px;
+
+            background: rgba(255, 255, 255, 0.06);
+
+            border: 1px solid rgba(255, 255, 255, 0.2);
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 0 10px rgba(120, 70, 255, 0.3),
+                0 0 30px rgba(120, 70, 255, 0.15);
+
+            backdrop-filter: blur(5px);
+
+            transition: 0.3s;
+        }
+
+
+        .card:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 0 15px #7c4dff,
+                0 0 40px rgba(124, 77, 255, 0.5);
+
+        }
+
+
+        .card h2 {
+
+            font-size: 30px;
+
+            text-shadow:
+                0 0 10px #9b7aff,
+                0 0 20px #6a35ff;
+
+        }
+
+
+        /* ===== AUDIO ===== */
+
+        audio {
+
+            width: 90%;
+
+            margin: 20px;
+
+            filter: drop-shadow(0 0 10px #7c4dff);
+
+        }
+
+
+        /* ===== JOTARO ===== */
+
+        .jotaro {
+
+            width: 300px;
+
+            border-radius: 15px;
+
+            margin-top: 20px;
+
+            box-shadow:
+                0 0 10px #8c5cff,
+                0 0 30px #6a35ff,
+                0 0 60px rgba(106, 53, 255, 0.5);
+
+            transition: 0.4s;
+
+        }
+
+
+        .jotaro:hover {
+
+            transform: scale(1.05);
+
+            box-shadow:
+                0 0 20px #b18cff,
+                0 0 50px #7c4dff,
+                0 0 80px #6a35ff;
+
+        }
+
+
+        /* ===== VIDEO ===== */
+
+        .video {
+
+            width: 80%;
+            max-width: 700px;
+
+            border-radius: 15px;
+
+            margin-top: 20px;
+
+            box-shadow:
+                0 0 15px #7c4dff,
+                0 0 40px rgba(124, 77, 255, 0.4);
+
+        }
+
+
+        /* ===== FOOTER ===== */
+
+        .footer {
+
+            margin-top: 70px;
+
+            padding: 25px;
+
+            color: #777;
+
+            font-size: 14px;
+
+            text-shadow:
+                0 0 8px #6a35ff;
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- STAR LAYERS -->
+
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+
+
+    <!-- WEBSITE CONTENT -->
+
+    <div class="content">
+
+
+        <div class="header">
+
+            <h1>🌌 HEAVENLY JUMPSTYLE</h1>
+
+            <p>
+                Welcome to my little corner of the universe.
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <h2>🎵 Music</h2>
+
+            <p>
+                HEAVENLY JUMPSTYLE — Slowed Version
+            </p>
+
+            <audio controls>
+
+                <source
+                    src="https://svs-lab-new.github.io/web-pages/HEAVENLY%20JUMPSTYLE%20-%20Slowed%20Version.mp3"
+                    type="audio/mpeg">
+
+            </audio>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <h2>🗿 Jotaro</h2>
+
+            <img
+                src="./jotaro.jpg"
+                alt="Jotaro"
+                class="jotaro">
+
+        </div>
+        <div class="footer">
+
+            <p>
+                Made with HTML & CSS 🚀
+            </p>
+
+            <p>
+                SVS Lab © 2026
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
